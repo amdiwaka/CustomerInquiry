@@ -16,6 +16,8 @@ namespace CustomerInquiry.Models
     [JsonObject(IsReference = false)]
     public partial class Transaction
     {
+        public virtual Customer Customer { get; set; }
+
         public long Transaction_ID { get; set; }
         public long Customer_ID { get; set; }
         public Nullable<System.DateTime> Date { get; set; }
@@ -23,6 +25,5 @@ namespace CustomerInquiry.Models
         public string Currency_Code { get; set; }
         public string Status { get; set; }
     
-        public virtual Customer Customer { get; set; }
     }
 }
